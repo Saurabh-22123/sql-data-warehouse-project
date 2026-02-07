@@ -7,7 +7,7 @@ This repository showcases a complete, end-to-end data engineering lifecycle. It 
 ## 🏗️ Data Architecture
 
 The project utilizes a multi-layered (**Bronze**, **Silver** & **Gold**) approach to ensure data integrity and performance:
-![Data Architecture](documents/Data Architecture.png)
+<img width="1044" height="394" alt="Data Architecture" src="https://github.com/user-attachments/assets/88345f2f-d15b-445f-83c9-4c0b3e7b84a5" />
 
 1. **Bronze Layer**: Acts as the landing zone for raw data. CSV files are ingested directly into the SQL Server environment in their original state.
 2. **Silver Layer**: The "Source of Truth." This stage handles data cleansing, standardization, and normalization to ensure high data quality.
