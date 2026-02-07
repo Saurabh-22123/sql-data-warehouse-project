@@ -16,12 +16,12 @@ BEGIN
 	BEGIN TRY
 		SET @batch_start_time = GETDATE();
 		PRINT '====================';
-    PRINT 'Loading Bronze Layer';
+   		PRINT 'Loading Bronze Layer';
 		PRINT '====================';
 
-    PRINT '----------------------------------';
-    PRINT 'Loading CRM Tables in Bronze Layer';
-    PRINT '----------------------------------';
+    	PRINT '----------------------------------';
+    	PRINT 'Loading CRM Tables in Bronze Layer';
+    	PRINT '----------------------------------';
 
 		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: bronze.crm_cust_info';
@@ -118,7 +118,7 @@ BEGIN
         PRINT '   - Total Load Duration: ' + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' seconds';
 		PRINT '=========================================='
 	END TRY
-  BEGIN CATCH
+    BEGIN CATCH
 		PRINT '=========================================='
 		PRINT 'ERROR OCCURED DURING LOADING BRONZE LAYER'
 		PRINT 'Error Message' + ERROR_MESSAGE();
